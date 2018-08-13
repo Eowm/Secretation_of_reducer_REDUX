@@ -5,20 +5,22 @@ import {THUMB_UP_COMMENT} from './actions';
 import {THUMB_DOWN_COMMENT} from './actions';
 
 const initialState = {
-	comments: [],
-	users: []
+    comments: [],
+    users: []
 }
 
-import { combineReducers } from 'redux';
+import {
+    combineReducers
+} from 'redux';
 import comments from './comments';
 
 const initialState = {
-	comments: [],
-	users: []
+    comments: [],
+    users: []
 }
 
-function app(state= initialState, action) {
-	return{
-		comments: comments(state.comments, action)
-	};
+function app(state = initialState, action) {
+    return {
+        comments: comments(state.comments, action)
+    };
 }
